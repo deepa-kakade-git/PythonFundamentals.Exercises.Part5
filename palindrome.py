@@ -5,4 +5,7 @@ def is_palindrome(value: str) -> bool:
     :param value: A string
     :return: A boolean
     """
-    pass  # remove pass statement and implement me
+    # Remove spaces and punctuation, and convert to lowercase
+    value = value.lower()
+    value = ''.join(char for char in value if char.isalnum())
+    return value == value[::-1]
